@@ -1,5 +1,7 @@
 # Code Spark Structured Streaming Article
 
+There is an [article](https://fithis2001.medium.com/processing-kafka-streams-with-spark-connect-db26216b8b33) for this.
+
 The code is adapted from the wonderful repository of [Gary Stafford](https://github.com/garystafford/streaming-sales-generator)
 
 Before launching the cluster you need to create a bunch of folders
