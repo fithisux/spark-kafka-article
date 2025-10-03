@@ -1,5 +1,12 @@
+docker run -it --network=spark-kafka-article_streaming-stack -v %cd%\localvolumes\all_conf\spark-defaults.conf:/opt/spark/conf/spark-defaults.conf -v  %cd%\localvolumes\ivycache:/opt/spark/ivycache:rw -v %cd%\test_stream_kafka.py:/opt/spark/test_stream_kafka.py apache/spark:4.0.1-scala2.13-java17-python3-r-ubuntu /opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.13:4.0.1 /opt/spark/test_stream_kafka.py
+
+docker run -it --network=spark-kafka-article_streaming-stack -v %cd%\localvolumes\all_conf\spark-defaults.conf:/opt/spark/conf/spark-defaults.conf -v  %cd%\localvolumes\ivycache:/opt/spark/ivycache:rw -v %cd%\test_stream_kafka.py:/opt/spark/test_stream_kafka.py apache/spark:4.0.1-scala2.13-java17-python3-r-ubuntu /opt/spark/bin/spark-submit /opt/spark/test_stream_kafka.py
+
+
 docker run -it --network=apache_spark_examples_streaming-stack -v %cd%\localvolumes\all_conf\spark-defaults.conf:/opt/spark/conf/spark-defaults.conf -v  %cd%\localvolumes\ivycache:/opt/spark/ivycache:rw -v %cd%\batch_section\spark_batch_nb1_code.py:/opt/spark/spark_batch_nb1_code.py apache/spark:4.0.1-scala2.13-java17-python3-r-ubuntu /opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.13:4.0.1 /opt/spark/spark_batch_nb1_code.py
 
+
+docker run -it --network=apache_spark_examples_streaming-stack -v %cd%\localvolumes\all_conf\spark-defaults.conf:/opt/spark/conf/spark-defaults.conf -v  %cd%\localvolumes\ivycache:/opt/spark/ivycache:rw -v %cd%\batch_section\spark_batch_nb1_code.py:/opt/spark/spark_batch_nb1_code.py apache/spark:4.0.1-scala2.13-java17-python3-r-ubuntu /opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.13:4.0.1 /opt/spark/spark_batch_nb1_code.py
 
 
 docker run -it --network=apache_spark_examples_streaming-stack -v %cd%\localvolumes\all_conf\spark-defaults.conf:/opt/spark/conf/spark-defaults.conf -v  %cd%\localvolumes\ivycache:/opt/spark/ivycache:rw -v %cd%\batch_section\spark_batch_nb2_code.py:/opt/spark/spark_batch_nb2_code.py apache/spark:4.0.1-scala2.13-java17-python3-r-ubuntu /opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.13:4.0.1 /opt/spark/spark_batch_nb2_code.py
