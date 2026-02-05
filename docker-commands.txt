@@ -10,3 +10,6 @@ docker run -it --network=apache_spark_examples_streaming-stack -v %cd%\localvolu
 
 
 docker run -it --network=apache_spark_examples_streaming-stack -v %cd%\localvolumes\all_conf\spark-defaults.conf:/opt/spark/conf/spark-defaults.conf -v  %cd%\localvolumes\ivycache:/opt/spark/ivycache:rw -v %cd%\batch_section\spark_batch_nb2_code.py:/opt/spark/spark_batch_nb2_code.py apache/spark:4.0.1-scala2.13-java17-python3-r-ubuntu /opt/spark/bin/spark-submit  /opt/spark/spark_batch_nb2_code.py
+
+
+>docker run -it --network=spark-kafka-article_streaming-stack -v %cd%\localvolumes\sc-work-dir:/opt/spark/work-dir:rw -v %cd%\localvolumes\all_conf\spark-defaults.conf:/opt/spark/conf/spark-defaults.conf -v  %cd%\localvolumes\ivycache:/opt/spark/ivycache:rw -v %cd%\run_bare_spark.py:/opt/spark/run_bare_spark.py apache/spark:4.0.1-scala2.13-java17-python3-r-ubuntu /opt/spark/bin/spark-submit  /opt/spark/run_bare_spark.py

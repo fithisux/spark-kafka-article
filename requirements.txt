@@ -1,2 +1,2 @@
-pyspark-connect
+pyspark-connect==4.0.1
 ipykernel
